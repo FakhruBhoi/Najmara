@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — NAJMARA</title>
+<meta name="description" content="Start an enquiry with NAJMARA — data centre projects, maintenance &amp; facility management, general contracting and material supply across the Kingdom of Saudi Arabia.">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav" data-nav>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="../services/">Capabilities</a>
+    <a href="../about/">About</a>
+    <a href="../track-record/">Track Record</a>
+  </nav>
+
+  <a class="wordmark" href="../" aria-label="NAJMARA home">NAJMARA</a>
+
+  <div class="nav-actions">
+    <a class="btn btn--sage" href="./" aria-current="page">Inquiry</a>
+    <a class="btn btn--primary" href="./">Request Proposal</a>
+    <button class="nav-burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-menu>
+  <a class="m-link" href="../services/">Capabilities <span>01</span></a>
+  <a class="m-link" href="../about/">About <span>02</span></a>
+  <a class="m-link" href="../track-record/">Track Record <span>03</span></a>
+  <a class="m-link" href="./">Contact <span>04</span></a>
+  <div class="btn-row">
+    <a class="btn btn--sage" href="./">Inquiry</a>
+    <a class="btn btn--primary" href="./">Request Proposal</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="page-hero__bg" style="background-image:url('../assets/hero-3.jpg');"></div>
+    <div class="page-hero__veil"></div>
+    <div class="wrap page-hero__inner">
+      <p class="breadcrumb"><a href="../">Home</a> <span>/</span> Contact</p>
+      <p class="eyebrow" style="margin-top:1.6rem;">Get in touch</p>
+      <h1>Let's talk about <em>your site.</em></h1>
+      <p class="lede">Tell us the scope, the frequencies and the standard you expect. You will get a written
+        proposal and a named contact who knows the site.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="split" style="align-items:start;">
+
+        <!-- ============================================= enquiry form === -->
+        <div>
+          <span class="section-index" data-reveal>01 — Enquiry</span>
+          <h2 class="h2" data-reveal>Request a proposal</h2>
+          <p class="body-text" style="margin-top:1.2rem;" data-reveal>
+            Complete the form and our team will respond with next steps. Fields marked with an asterisk are
+            required.
+          </p>
+
+          <form class="card" data-enquiry-form data-endpoint="/api/enquiry" action="/api/enquiry" method="post" novalidate style="margin-top:2rem; padding:clamp(1.4rem,3vw,2.4rem);" data-reveal>
+            <div class="form-grid">
+              <div class="field" data-field>
+                <label for="name">Full name *</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                <span class="field__error" data-error></span>
+              </div>
+
+              <div class="field" data-field>
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Organisation">
+                <span class="field__error" data-error></span>
+              </div>
+
+              <div class="field" data-field>
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
+                <span class="field__error" data-error></span>
+              </div>
+
+              <div class="field" data-field>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+966">
+                <span class="field__error" data-error></span>
+              </div>
+
+              <div class="field field--full" data-field>
+                <label for="interest">Area of interest *</label>
+                <select id="interest" name="interest" required>
+                  <option value="">Select a pillar</option>
+                  <option>Data Centre Projects</option>
+                  <option>Maintenance &amp; Facility Management</option>
+                  <option>General Contracting</option>
+                  <option>Equipment &amp; Material Supply</option>
+                  <option>Multiple pillars / integrated contract</option>
+                </select>
+                <span class="field__error" data-error></span>
+              </div>
+
+              <div class="field field--full" data-field>
+                <label for="message">Scope *</label>
+                <textarea id="message" name="message" placeholder="Site location, systems, frequencies, timeline…" required></textarea>
+                <span class="field__error" data-error></span>
+              </div>
+
+              <!-- honeypot: invisible to people, tempting to bots -->
+              <div class="field" aria-hidden="true" style="position:absolute; left:-9999px;">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="btn-row" style="margin-top:1.6rem;">
+              <button class="btn btn--primary" type="submit">Send enquiry <span class="btn__arrow">→</span></button>
+              <p class="form-note" style="margin:0;">Your details are used only to respond to this enquiry.
+                Submissions are delivered straight to NAJMARA's inbox.</p>
+            </div>
+
+            <p class="form-status" data-form-status hidden role="status"></p>
+          </form>
+        </div>
+
+        <!-- ============================================ contact panel === -->
+        <aside style="display:grid; gap:1.2rem;">
+          <div class="contact-panel" data-reveal style="--delay:.08s;">
+            <span class="eyebrow eyebrow--cream">Direct</span>
+            <dl style="margin:1.2rem 0 0;">
+              <div class="contact-row">
+                <dt>Address</dt>
+                <dd>Kingdom of Saudi Arabia</dd>
+              </div>
+              <div class="contact-row">
+                <dt>Phone</dt>
+                <dd><span class="pending">To be confirmed</span></dd>
+              </div>
+              <div class="contact-row">
+                <dt>Email</dt>
+                <dd><span class="pending">To be confirmed</span></dd>
+              </div>
+              <div class="contact-row">
+                <dt>Website</dt>
+                <dd><span class="pending">To be confirmed</span></dd>
+              </div>
+            </dl>
+            <p class="small" style="margin-top:1.2rem;">Direct lines are being finalised in the company profile —
+              send an enquiry above and we will come back to you.</p>
+          </div>
+
+          <div class="card" data-tilt data-reveal style="--delay:.16s;">
+            <span class="eyebrow eyebrow--cream">What happens next</span>
+            <ol style="margin-top:1.2rem; display:grid; gap:0.9rem;">
+              <li style="display:grid; grid-template-columns:2.4rem 1fr; gap:0.8rem; align-items:start;">
+                <span class="hero-step__num" style="color:var(--cream);">01</span>
+                <span style="font-size:.92rem; color:var(--ink-72);">Scope reviewed against your written brief
+                  and site details.</span>
+              </li>
+              <li style="display:grid; grid-template-columns:2.4rem 1fr; gap:0.8rem; align-items:start;">
+                <span class="hero-step__num" style="color:var(--cream);">02</span>
+                <span style="font-size:.92rem; color:var(--ink-72);">A named contact assigned to your contract
+                  and site.</span>
+              </li>
+              <li style="display:grid; grid-template-columns:2.4rem 1fr; gap:0.8rem; align-items:start;">
+                <span class="hero-step__num" style="color:var(--cream);">03</span>
+                <span style="font-size:.92rem; color:var(--ink-72);">Written proposal covering services,
+                  frequencies, responsibilities and reporting.</span>
+              </li>
+            </ol>
+          </div>
+
+          <figure class="media-frame" data-reveal style="--delay:.22s; margin:0;">
+            <img src="../assets/hero-1.jpg" alt="City skyline at night in the Kingdom of Saudi Arabia." loading="lazy" width="1600" height="900">
+            <figcaption class="media-caption">NAJMARA — Kingdom of Saudi Arabia</figcaption>
+          </figure>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo-najmara.png" alt="NAJMARA" width="230" height="76">
+        <p>Data centres powered. Facilities maintained. Sites built. Materials supplied.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Capabilities</h4>
+        <ul>
+          <li><a href="../services/#data-centre">Data Centre Projects</a></li>
+          <li><a href="../services/#maintenance">Maintenance &amp; Facility Management</a></li>
+          <li><a href="../services/#contracting">General Contracting</a></li>
+          <li><a href="../services/#supply">Equipment &amp; Material Supply</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about/">About us</a></li>
+          <li><a href="../track-record/">Track record</a></li>
+          <li><a href="./">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li class="muted">Kingdom of Saudi Arabia</li>
+          <li class="muted">Phone — to be confirmed</li>
+          <li class="muted">Email — to be confirmed</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> NAJMARA. All rights reserved.</span>
+      <span class="tag-line">One accountable partner</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
